@@ -14,6 +14,8 @@ func main() {
 		data = data.Next()
 	}
 
+	// tiap data next menunjukkan posisi index data saat ini
+
 	//data.Value = "Value 1"
 	//
 	//data = data.Next()
