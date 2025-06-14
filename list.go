@@ -1,5 +1,9 @@
 package main
 
+/**
+	implementasi struktur data dobuly linked-list di golang
+**/
+
 import (
 	"container/list"
 	"fmt"

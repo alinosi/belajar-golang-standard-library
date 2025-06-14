@@ -1,5 +1,9 @@
 package main
 
+/**
+	implementasi struktu data ring di golang
+**/
+
 import (
 	"container/ring"
 	"fmt"
@@ -14,7 +18,7 @@ func main() {
 		data = data.Next()
 	}
 
-	// tiap data next menunjukkan posisi index data saat ini
+	// tiap data.next() mengubah posisi index data.
 
 	//data.Value = "Value 1"
 	//
