@@ -10,7 +10,7 @@ type User struct {
 	Age  int
 }
 
-type UserSlice []User 
+type UserSlice []User
 
 func (s UserSlice) Len() int {
 	return len(s)
@@ -33,14 +33,14 @@ func main() {
 	}
 
 	// UserSlice dapat mengimplementasikan sort
-	
+
 	sort.Sort(UserSlice(users)) // konversi tipe data users ke UserSlice
 
 	fmt.Println(users)
 }
 
 /*
- syarat untuk dapat menggunakan method dari package class 
+ syarat untuk dapat menggunakan method dari package class
  kita harus mengikuti kontrak dari interface sort yaitu memiliki
  3 method : Len, Less, Swap
 */
