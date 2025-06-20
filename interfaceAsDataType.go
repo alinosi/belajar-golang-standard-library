@@ -13,8 +13,19 @@ type Car struct {
 	name string
 }
 
+type Bike struct {
+	name string
+}
+
 func (c Car) start() {
-	fmt.Println("Car: ", c.name)
+	fmt.Println("open the car")
+	fmt.Println("sit on the seat")
+	fmt.Println("Car is starting")
+}
+
+func (c Bike) start() {
+	fmt.Println("sit on the seat")
+	fmt.Println("Bike is starting")
 }
 
 func brandCheck(value Vehicle) {
@@ -30,26 +41,29 @@ func main() {
 	b := Car{"mercedes"}               // normal intialization, struct as data type
 	var c Vehicle = returnVehicle()    // Interface as data type
 
-	// This is wrong because a vehicle is not necessarily a car.
-	// It could be that the returned data type is a bike not a car.
+	// In this case, this is the example of wrong way to determine variable data type
 	// var d Car = returnVehicle()
 
+	// it's occur because a vehicle is not necessarily a car.
+	// It could be that the returned data type is a bike not a car.
+
+
 	fmt.Println("VAR a")
-	a.start()                      // Volvo
+	a.start()
 	brandCheck(a)                  // volvo
 	fmt.Println(a)                 // {volvo}
 	fmt.Println(reflect.TypeOf(a)) // ouput : Car
 	fmt.Println()
 
 	fmt.Println("VAR b")
-	b.start()                      // mercedes
+	b.start()
 	brandCheck(b)                  // mercedes
 	fmt.Println(b)                 // {mercedes}
 	fmt.Println(reflect.TypeOf(b)) // ouput : Car
 	fmt.Println()
 
 	fmt.Println("VAR c")
-	c.start()                      // Toyota
+	c.start()
 	brandCheck(c)                  // Toyota
 	fmt.Println(c)                 // {Toyota}
 	fmt.Println(reflect.TypeOf(c)) // ouput : Car
