@@ -48,8 +48,8 @@ func readFile(name string) (string, error) {
 func main() {
 	// createNewFile("sample.log", "this is sample log")
 
-	//result, _ := readFile("sample.log")
-	//fmt.Println(result)
+	// result, _ := readFile("sample.log")
+	// fmt.Println(result)
 
 	addToFile("sample.log", "\nthis is add message")
 }
