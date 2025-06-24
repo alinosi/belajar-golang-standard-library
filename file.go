@@ -53,3 +53,8 @@ func main() {
 
 	addToFile("sample.log", "\nthis is add message")
 }
+
+
+// use package os to create or open file
+
+// use package io/bufio to write file
