@@ -16,7 +16,7 @@ func main() {
 
 	for {
 		record, err := reader.Read()
-		if err == io.EOF {
+		if err == io.EOF { // EOF = end file(file selesai dibaca/sudah di baris terakhir)
 			break
 		}
 
